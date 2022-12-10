@@ -20,7 +20,6 @@ app = nonebot.get_asgi()
 driver = nonebot.get_driver()
 driver.register_adapter(ONEBOT_V11Adapter)
 
-
 # nonebot.load_builtin_plugins("echo")
 
 # Please DO NOT modify this file unless you know what you are doing!
@@ -32,8 +31,10 @@ nonebot.load_from_toml("pyproject.toml")
 # config = driver.config
 # do something...
 
-# 群管功能
-nonebot.load_plugins("src/plugins/Main/")
+# 主要功能
+nonebot.load_plugins("src/plugins/Main")
+# 超管功能
+nonebot.load_plugins("src/plugins/Super")
 
 
 if __name__ == "__main__":
