@@ -9,6 +9,11 @@ save = on_command("保存数据", rule=to_me(), priority=5, block=True)
 
 @save.handle()
 async def save_data(private_event: v11.PrivateMessageEvent):
+    """
+    保存数据
+
+    :param private_event: 私聊事件
+    """
     # 判断是否为超管
     if private_event.user_id in SUPER_ADMIN:
         save_file()
