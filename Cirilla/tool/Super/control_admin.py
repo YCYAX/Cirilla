@@ -1,6 +1,6 @@
 from Cirilla.tool.Super import SUPER_ADMIN, save_file
 
-path = "src/Super/admin.json"
+path = "tool/Super/admin.json"
 
 
 def add_super(user_id: int, control: str = "super"):

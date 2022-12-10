@@ -3,7 +3,7 @@ import os
 
 from Cirilla.tool.Log import control
 
-path = "src/Super/admin.json"
+path = "tool/Super/admin.json"
 
 
 def load_file() -> dict:
