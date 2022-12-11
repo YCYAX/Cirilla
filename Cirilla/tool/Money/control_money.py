@@ -1,10 +1,9 @@
-import json
 from Cirilla.tool.Money import PLAYER_MONEY
 
 path = "tool/Money/money.json"
 
 
-def add_money(user_id: int, money_mount: int, time_info:str):
+def add_money(user_id: str, money_mount: int, time_info:str):
     """
     给玩家添加金钱
 
