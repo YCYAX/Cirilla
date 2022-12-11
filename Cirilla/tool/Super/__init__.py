@@ -1,3 +1,13 @@
+"""
+本模块负责处理玩家高级权限相关业务
+读取所有高级权限玩家: SUPER_ADMIN
+SUPER_ADMIN结构
+{
+    “super”：id int
+    “id”： id int
+}
+
+"""
 import json
 import os
 
@@ -10,7 +20,7 @@ def load_file() -> dict:
     """
     加载admin.json内容至内存
     """
-    with open(path, "r") as file:
+    with open(path, "r", encoding="utf8") as file:
         info = file.read()
         player_json = json.loads(info)
         return player_json
@@ -20,7 +30,7 @@ def save_file():
     """
     保存内容至admin.json
     """
-    with open(path, "w") as file:
+    with open(path, "w", encoding="utf8") as file:
         info_json = json.dumps(SUPER_ADMIN)
         file.write(info_json)
 
@@ -31,7 +41,7 @@ if os.path.exists(path):
     SUPER_ADMIN = load_file()
 else:
     control("SUCCESS", "Save", "Save检测到缺少admin.json,已创建")
-    with open(path, "w+") as f:
+    with open(path, "w+", encoding="utf8") as f:
         f.write(json.dumps({}))
     # 加载
     SUPER_ADMIN = load_file()
