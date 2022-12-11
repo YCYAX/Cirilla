@@ -1,5 +1,4 @@
 from nonebot import on_command
-from Cirilla.tool.Money import PLAYER_MONEY
 from Cirilla.tool.Money.control_money import *
 import nonebot.adapters.onebot.v11 as v11
 import random,time
@@ -15,7 +14,7 @@ async def player_sign(group_event: v11.GroupMessageEvent):
     :param group_event: 群聊事件
     """
     # 获取玩家名字和id
-    player_id = group_event.user_id
+    player_id = str(group_event.user_id)
     player_name = group_event.sender.nickname
     # 生成金币数量和签到时间
     money_mount = random.randint(0, 100)
