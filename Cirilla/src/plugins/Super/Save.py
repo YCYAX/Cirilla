@@ -15,7 +15,7 @@ async def save_data(private_event: v11.PrivateMessageEvent):
     :param private_event: 私聊事件
     """
     # 判断是否为超管
-    if private_event.user_id in SUPER_ADMIN:
+    if int(private_event.user_id) in SUPER_ADMIN.values():
         save_file()
         await save.finish("所有玩家金币保存成功")
     else:
