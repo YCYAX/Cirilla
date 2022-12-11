@@ -1,0 +1,1 @@
+cmd /k ".\bot_actiavte\Scripts\activate.bat&&pip freeze > requirements.txt"
