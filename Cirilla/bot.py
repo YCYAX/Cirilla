@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import nonebot
+import nonebot,sys
 from nonebot.adapters.onebot.v11 import Adapter as ONEBOT_V11Adapter
 
+sys.path.append("../")
 # Custom your logger
 # 
 # from nonebot.log import logger, default_format

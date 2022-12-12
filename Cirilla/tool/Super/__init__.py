@@ -12,9 +12,7 @@ import json
 import os
 
 from Cirilla.tool.Log import control
-import sys
 
-sys.path.append("../")
 path = "tool/Super/admin.json"
 
 

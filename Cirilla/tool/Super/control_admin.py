@@ -1,7 +1,5 @@
 from Cirilla.tool.Super import SUPER_ADMIN, save_file
-import sys
 
-sys.path.append("../")
 path = "tool/Super/admin.json"
 
 

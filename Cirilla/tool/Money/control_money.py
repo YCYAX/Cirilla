@@ -1,7 +1,5 @@
 from Cirilla.tool.Money import PLAYER_MONEY
-import sys
 
-sys.path.append("../")
 path = "tool/Money/money.json"
 
 
