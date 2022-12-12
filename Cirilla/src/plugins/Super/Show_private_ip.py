@@ -9,6 +9,11 @@ ip = on_command("私网地址", rule=to_me(), priority=5, block=True)
 
 @ip.handle()
 async def show_ip(private_event: v11.PrivateMessageEvent):
+    """
+    显示当前bot服务器内网地址
+
+    :param private_event: 私聊事件
+    """
     player_id = private_event.user_id
     if player_id in SUPER_ADMIN.values():
         private_ip = socket.gethostbyname(socket.gethostname())
