@@ -27,11 +27,15 @@ async def add_super_admin(private_event: v11.PrivateMessageEvent, add_id: int = 
     """
     # 获取玩家id
     player_id = private_event.user_id
-    # 判断是否为超管
-    if player_id in SUPER_ADMIN.values():
-        # 添加
-        add_super(int(add_id), str(player_id))
-        await add.finish(f"添加用户{add_id}为超管")
+    # 判断是否为空字典
+    if SUPER_ADMIN:
+        # 判断是否为超管
+        if player_id in SUPER_ADMIN.values():
+            # 添加
+            add_super(int(add_id), str(player_id))
+            await add.finish(f"添加用户{add_id}为超管")
+        else:
+            await add.finish(f"你权限不足")
     else:
         # 添加
         add_super(int(add_id))
