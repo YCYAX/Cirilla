@@ -19,4 +19,4 @@ async def save_data(private_event: v11.PrivateMessageEvent):
         save_file()
         await save.finish("所有玩家金币保存成功")
     else:
-        await save.finish("你不是超级管理员")
+        await save.finish("你权限不足")
