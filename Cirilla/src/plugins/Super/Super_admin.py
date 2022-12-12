@@ -5,7 +5,7 @@ from Cirilla.tool.Super import SUPER_ADMIN
 from Cirilla.tool.Super.control_admin import add_super
 import nonebot.adapters.onebot.v11 as v11
 
-add = on_command("添加超管", rule=to_me(), priority=5, block=True)
+add = on_command("添加超管", rule=to_me(), priority=1, block=True)
 
 
 @add.handle()

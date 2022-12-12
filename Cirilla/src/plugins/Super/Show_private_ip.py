@@ -4,7 +4,7 @@ from Cirilla.tool.Super import SUPER_ADMIN
 import nonebot.adapters.onebot.v11 as v11
 import socket
 
-ip = on_command("私网地址", rule=to_me(), priority=5, block=True)
+ip = on_command("私网地址", rule=to_me(), priority=1, block=True)
 
 
 @ip.handle()

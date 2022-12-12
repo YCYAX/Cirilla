@@ -3,7 +3,7 @@ from Cirilla.tool.Money.control_money import *
 import nonebot.adapters.onebot.v11 as v11
 import random,time
 
-sign = on_command("签到", priority=5, block=True)
+sign = on_command("签到", priority=1, block=True)
 
 
 @sign.handle()

@@ -4,7 +4,7 @@ from Cirilla.tool.Money import save_file
 from Cirilla.tool.Super import SUPER_ADMIN
 import nonebot.adapters.onebot.v11 as v11
 
-save = on_command("保存数据", rule=to_me(), priority=5, block=True)
+save = on_command("保存数据", rule=to_me(), priority=1, block=True)
 
 
 @save.handle()
