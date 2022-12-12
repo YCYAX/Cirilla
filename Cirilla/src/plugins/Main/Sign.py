@@ -2,7 +2,9 @@ from nonebot import on_command
 from Cirilla.tool.Money.control_money import *
 import nonebot.adapters.onebot.v11 as v11
 import random,time
+import sys
 
+sys.path.append("../")
 sign = on_command("签到", priority=5, block=True)
 
 

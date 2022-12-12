@@ -12,7 +12,9 @@ PLAYER_MONEY结构
 """
 import json, os
 from Cirilla.tool.Log import control
+import sys
 
+sys.path.append("../")
 path = "tool/Money/money.json"
 
 
