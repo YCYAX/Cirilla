@@ -14,7 +14,9 @@ async def show_ip(private_event: v11.PrivateMessageEvent):
 
     :param private_event: 私聊事件
     """
+    # 获取玩家id
     player_id = private_event.user_id
+    # 判断权限
     if player_id in SUPER_ADMIN.values():
         private_ip = socket.gethostbyname(socket.gethostname())
         await ip.finish(f"内网地址：{private_ip}")
