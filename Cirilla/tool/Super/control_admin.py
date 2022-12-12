@@ -1,3 +1,8 @@
+"""
+函数：
+add_super() -> 添加bot超管用户
+"""
+
 from Cirilla.tool.Super import SUPER_ADMIN, save_file
 
 path = "tool/Super/admin.json"

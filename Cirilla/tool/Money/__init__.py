@@ -9,6 +9,11 @@ PLAYER_MONEY结构
     }
 }
 
+函数：
+save_file() -> 保存内容至money.json
+
+模块：
+control_money.py -> 对玩家金钱进行操作
 """
 import json, os
 from Cirilla.tool.Log import control

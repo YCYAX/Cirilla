@@ -1,3 +1,10 @@
+"""
+函数：
+add_money() -> 给玩家添加金钱
+query_money() -> 查询玩家金钱
+"""
+
+
 from Cirilla.tool.Money import PLAYER_MONEY
 
 path = "tool/Money/money.json"

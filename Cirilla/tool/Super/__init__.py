@@ -1,12 +1,18 @@
 """
 本模块负责处理玩家高级权限相关业务
 读取所有高级权限玩家: SUPER_ADMIN
-SUPER_ADMIN结构
+
+SUPER_ADMIN结构:
 {
     “super”：id int
     “id”： id int
 }
 
+函数：
+save_file() -> 保存内容至admin.json
+
+模块：
+control_admin.py -> 对管理员进行操作
 """
 import json
 import os
