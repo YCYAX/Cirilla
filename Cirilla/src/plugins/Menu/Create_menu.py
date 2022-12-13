@@ -4,6 +4,7 @@ from nonebot import on_command
 from PIL import Image, ImageDraw, ImageFont
 from Cirilla.tool.Menu import load_file
 from Cirilla.tool.Super import SUPER_ADMIN
+from Cirilla.tool.Menu.control_menu import show_menu_to_player
 import nonebot.adapters.onebot.v11 as v11
 
 create = on_command("生成菜单", rule=to_me(), priority=1, block=True)
@@ -26,12 +27,16 @@ async def check_super(private_event: v11.PrivateMessageEvent):
 
 
 @create.got("create_info", prompt="输入你想生成的菜单类型和字号\n例如：普通/高级 30")
-async def create_menu(arg_info: str = ArgStr("create_info")):
+async def create_menu(bot: v11.Bot, private_event: v11.PrivateMessageEvent, arg_info: str = ArgStr("create_info")):
     """
     更新菜单
 
     :param arg_info: 命令后参数
+    :param bot: 机器人
+    :param private_event: 私聊事件
     """
+    # 获取id
+    player_id = private_event.user_id
     # 获取输入信息
     info_list = arg_info.split(" ")
     try:
@@ -48,6 +53,9 @@ async def create_menu(arg_info: str = ArgStr("create_info")):
         await create.finish("菜单类型参数错误,请选择 普通/高级 ")
     # 调用函数
     draw_txt_in_photo(menu_type, ttf_size)
+    # 发送图片
+    cq_info = show_menu_to_player(menu_type)
+    await bot.send_private_msg(user_id=player_id, message=cq_info)
 
 
 def sum_menu(menu_type: str) -> tuple[int, list]:
