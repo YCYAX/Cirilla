@@ -13,7 +13,7 @@ async def check_super(private_event: v11.PrivateMessageEvent):
     """
     检查权限
 
-    :param private_event: 群聊事件
+    :param private_event: 私聊事件
     """
     # 获取id
     player_id = private_event.user_id
