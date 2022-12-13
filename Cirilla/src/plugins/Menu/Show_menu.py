@@ -1,6 +1,6 @@
 from nonebot.rule import to_me
 from nonebot import on_command
-from Cirilla.tool.Menu import load_file, save_file
+from Cirilla.tool.Menu import load_file
 from Cirilla.tool.Super import SUPER_ADMIN
 import nonebot.adapters.onebot.v11 as v11
 
