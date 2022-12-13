@@ -9,14 +9,14 @@ up_menu = on_command("更新菜单", rule=to_me(), priority=1, block=True)
 
 
 @up_menu.handle()
-async def check_super(group_event: v11.GroupMessageEvent):
+async def check_super(private_event: v11.PrivateMessageEvent):
     """
     检查权限
 
-    :param group_event: 群聊事件
+    :param private_event: 群聊事件
     """
     # 获取id
-    player_id = group_event.user_id
+    player_id = private_event.user_id
     if player_id in SUPER_ADMIN.values():
         pass
     else:
