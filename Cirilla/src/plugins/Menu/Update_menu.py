@@ -17,6 +17,7 @@ async def check_super(private_event: v11.PrivateMessageEvent):
     """
     # 获取id
     player_id = private_event.user_id
+    # 判断权限
     if player_id in SUPER_ADMIN.values():
         pass
     else:

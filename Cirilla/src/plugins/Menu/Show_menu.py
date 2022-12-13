@@ -16,6 +16,7 @@ async def check_super_and_show(private_event: v11.PrivateMessageEvent):
     """
     # 获取id
     player_id = private_event.user_id
+    # 判断权限
     if player_id in SUPER_ADMIN.values():
         menu_info = load_file()
         await show.finish(f"高级：{menu_info['super']}\n"
