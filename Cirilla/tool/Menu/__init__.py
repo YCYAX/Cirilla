@@ -22,8 +22,8 @@ def load_file() -> dict:
     """
     with open(path, "r", encoding="utf8") as file:
         info = file.read()
-        player_json = json.loads(info)
-        return player_json
+        menu_json = json.loads(info)
+        return menu_json
 
 
 def save_file(info: dict):

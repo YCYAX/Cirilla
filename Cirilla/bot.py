@@ -33,9 +33,22 @@ nonebot.load_from_toml("pyproject.toml")
 # do something...
 
 # 主要功能
+"""
+查询玩家金币
+签到
+"""
 nonebot.load_plugins("src/plugins/Main")
-# 超管功能
+# 管理员
+"""
+保存数据：金币
+展示私网地址
+添加超管
+"""
 nonebot.load_plugins("src/plugins/Super")
+# 菜单
+"""
+"""
+nonebot.load_plugins("src/plugins/Menu")
 
 
 if __name__ == "__main__":
