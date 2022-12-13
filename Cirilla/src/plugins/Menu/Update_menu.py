@@ -31,6 +31,7 @@ async def up_data(info: str = ArgStr("up")):
 
     :param info: 命令后参数
     """
+
     async def update_menu(menu_type: str, info: str):
         """
         更新菜单内容
@@ -51,7 +52,7 @@ async def up_data(info: str = ArgStr("up")):
         menu_list: list = menu_info[menu_type]
         menu_list.append(info)
         # 排序存入,最长的放在第0位
-        menu_list.sort(reverse=True)
+        menu_list.sort(key=lambda i: len(i), reverse=True)
         save_file(menu_info)
         await up_menu.send("添加成功")
         await up_menu.finish(f"高级：{menu_info['super']}\n"
