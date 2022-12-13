@@ -52,7 +52,7 @@ async def create_menu(arg_info: str = ArgStr("create_info")):
 
 def sum_menu(menu_type: str) -> tuple[int, list]:
     """
-    确定菜单类型并返回宽度最大值和定影菜单
+    确定菜单类型并返回宽度最大值和对应菜单
 
     :param menu_type: 菜单类型
     """
