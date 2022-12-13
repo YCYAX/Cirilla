@@ -9,6 +9,9 @@
 函数：
 load_file() -> 加载menu.json内容
 save_file() -> 保存内容至menu.json
+
+模块：
+control_menu.py -> 对菜单进行操作
 """
 import json, os
 from Cirilla.tool.Log import control
