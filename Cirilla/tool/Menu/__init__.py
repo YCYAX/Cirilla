@@ -40,6 +40,16 @@ def save_file(info: dict):
 
 
 # 判断路径
+if os.path.exists("photo"):
+    pass
+else:
+    os.mkdir("photo")
+    control("SUCCESS", "Menu", "Menu包检测到缺少photo文件夹,已创建")
+if os.path.exists("photo/output"):
+    pass
+else:
+    os.mkdir("photo/output/")
+    control("SUCCESS", "Menu", "Menu包检测到缺少photo/output文件夹,已创建")
 if os.path.exists(path):
     pass
 else:
