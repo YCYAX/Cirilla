@@ -34,19 +34,24 @@ nonebot.load_from_toml("pyproject.toml")
 
 # 主要功能
 """
-查询玩家金币
-签到
+签到	玩家签到随机获得金币
+我的金币	查询玩家金币数量
 """
 nonebot.load_plugins("src/plugins/Main")
 # 管理员
 """
-保存数据：金币
-展示私网地址
-添加超管
+添加超管 [第一次添加不需要超管权限]	给bot添加一个超级管理用户
+保存数据 [需要超管权限]	保存玩家的数据 [金币]
+私网地址 [需要超管权限]	显示服务器内网地址
 """
 nonebot.load_plugins("src/plugins/Super")
 # 菜单
 """
+菜单	展示普通菜单
+更新菜单 [需要超管权限]	更新菜单内容
+菜单内容 [需要超管权限]	展示菜单内容
+生成菜单 [需要超管权限]	生成对应菜单
+高级菜单 [需要超管权限]	展示高级菜单
 """
 nonebot.load_plugins("src/plugins/Menu")
 
