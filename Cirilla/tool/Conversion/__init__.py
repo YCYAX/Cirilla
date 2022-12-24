@@ -1,4 +1,5 @@
 """
+本模块负责处理数据转换相关业务
 函数：
 image_base64() -> image to base64 str
 """
