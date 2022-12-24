@@ -22,3 +22,4 @@
 |菜单内容 <font color="Red">[需要超管权限]</font>|展示菜单内容|
 |生成菜单 <font color="Red">[需要超管权限]</font>|生成对应菜单|
 |高级菜单 <font color="Red">[需要超管权限]</font>|展示高级菜单|
+|广播 <font color="Red">[需要超管权限]</font>|广播超管消息|
