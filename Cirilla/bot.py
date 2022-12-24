@@ -43,6 +43,7 @@ nonebot.load_plugins("src/plugins/Main")
 添加超管 [第一次添加不需要超管权限]	给bot添加一个超级管理用户
 保存数据 [需要超管权限]	保存玩家的数据 [金币]
 私网地址 [需要超管权限]	显示服务器内网地址
+广播 [需要超管权限] 广播超管消息
 """
 nonebot.load_plugins("src/plugins/Super")
 # 菜单
