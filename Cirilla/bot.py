@@ -55,6 +55,7 @@ nonebot.load_plugins("src/plugins/Super")
 高级菜单 [需要超管权限]	展示高级菜单
 """
 nonebot.load_plugins("src/plugins/Menu")
+nonebot.load_plugins("src/plugins/Space_exploration")
 
 
 if __name__ == "__main__":
