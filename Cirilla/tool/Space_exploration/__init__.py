@@ -15,7 +15,7 @@ SPACE_SIGN结构
 import json, os
 from Cirilla.tool.Log import control
 
-path = "tool/Money/player_sign.json"
+path = "tool/Space_exploration/player_sign.json"
 
 
 def load_file() -> dict:
