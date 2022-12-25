@@ -30,7 +30,9 @@ async def add_super_admin(bot: v11.Bot, info: str = ArgStr("message")):
     :param bot: 机器人
     :param info: 广播信息
     """
+    # 读取群列表
     group_json = await bot.get_group_list()
+    # 发送信息
     for i in group_json:
         await bot.send_msg(group_id=int(i['group_id']), message=info)
     await broadcast.finish("广播成功")
