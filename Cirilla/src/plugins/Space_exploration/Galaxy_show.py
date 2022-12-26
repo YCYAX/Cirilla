@@ -40,7 +40,8 @@ async def show_galaxy(group_event: v11.GroupMessageEvent):
                 planet_info["planet_name"]: {
                     'planet_size': planet_info["planet_size"],
                     'planet_weather': planet_info["planet_weather"],
-                    'planet_state': False
+                    'planet_state': False,
+                    'planet_map': []
                 }
             })
             galaxy_planet.append(planet_info["planet_name"])
