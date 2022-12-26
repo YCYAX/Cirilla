@@ -3,6 +3,9 @@ from Cirilla.tool.Space_exploration import *
 
 
 class Planet:
+    """
+    星球生成
+    """
     def __init__(self):
         range_number = random.randint(2, 8)
         yes_or_no = True
@@ -74,7 +77,7 @@ class Planet:
             else:
                 yes_or_no = False
         self.planet_name = name + "星"
-        self.planet_size = random.randint(16, 512)
+        self.planet_size = random.randint(10, 32)
         weather = ["金", "木", "水", "火", "土"]
         index = random.randint(0, 4)
         self.planet_weather = weather[index]
