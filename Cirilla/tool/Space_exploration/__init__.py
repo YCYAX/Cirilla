@@ -34,6 +34,7 @@ save_file -> 保存内容至json
 模块：
 galaxy_make.py -> 生成星系
 planet_make.py -> 生成星球
+planet_map_make.py -> 生成星球地图
 """
 import json, os
 from Cirilla.tool.Log import control
