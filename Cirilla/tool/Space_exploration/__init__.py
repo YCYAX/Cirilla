@@ -15,6 +15,16 @@ SPACE_GALAXY结构
     "星系名字": {
         "galaxy_pos": [宇宙坐标],
         "galaxy_size": 星系内星球数量
+        'galaxy_state': 是否生成了星球,
+        'galaxy_planet': [星球名字]
+    }
+}
+SPACE_PLANET结构
+{
+    "星球名字": {
+        "planet_size": 星球尺寸大小,
+        "planet_weather": "星球主属性",  # 金木水火土,
+        "planet_state": 是否生成了地图
     }
 }
 函数：
@@ -22,6 +32,7 @@ load_file -> 加载json到内存
 save_file -> 保存内容至json
 模块：
 galaxy_make.py -> 生成星系
+planet_make.py -> 生成星球
 """
 import json, os
 from Cirilla.tool.Log import control
