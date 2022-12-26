@@ -17,6 +17,7 @@ async def player_sign(group_event: v11.GroupMessageEvent):
     player_name = group_event.sender.nickname
     # 判断是否首次登录
     if player_id in SPACE_SIGN:
+        SPACE_SIGN[player_id]['state'] = "sign"
         await sign.send(f"欢迎回来！ {SPACE_SIGN[player_id]['name']} 冒险者")
     else:
         # 判断用户名是否重复
