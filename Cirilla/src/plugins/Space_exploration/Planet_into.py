@@ -3,7 +3,7 @@ from Cirilla.tool.Space_exploration import *
 import nonebot.adapters.onebot.v11 as v11
 from nonebot.internal.params import ArgStr
 from Cirilla.tool.Space_exploration.planet_map_make import make_map
-import random
+import random,numpy
 
 into = on_command("进入星球", priority=1, block=True)
 
@@ -50,6 +50,7 @@ async def into_planet(group_event: v11.GroupMessageEvent, planet: str = ArgStr("
     # 判断星球状态并生成
     if planet_state:
         planet_map = SPACE_PLANET[planet]['planet_map']
+        planet_map = numpy.reshape(planet_map, (planet_size, planet_size))
     else:
         planet_map = make_map(planet_size)
         SPACE_PLANET[planet]['planet_state'] = True
@@ -73,4 +74,4 @@ async def into_planet(group_event: v11.GroupMessageEvent, planet: str = ArgStr("
         new_map = old_map[row - 3:row + 4, column - 3:column + 4]
     # 更改状态
     SPACE_PLANET[planet]['planet_state'] = 'planet'
-    await into.finish(f"{player_pos}地图\n{new_map}")
+    await into.finish(f"{planet}地图\n{new_map}")
