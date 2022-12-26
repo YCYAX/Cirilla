@@ -24,7 +24,8 @@ SPACE_PLANET结构
     "星球名字": {
         "planet_size": 星球尺寸大小,
         "planet_weather": "星球主属性",  # 金木水火土,
-        "planet_state": 是否生成了地图
+        "planet_state": 是否生成了地图,
+        "planet_map": [地图]
     }
 }
 函数：
