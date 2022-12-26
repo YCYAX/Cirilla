@@ -34,9 +34,13 @@ async def check_pos(group_event: v11.GroupMessageEvent):
                 galaxy_info['galaxy_name']: {
                     'galaxy_pos': galaxy_info['galaxy_pos'],
                     'galaxy_size': galaxy_info['galaxy_size'],
+                    'galaxy_state': False,
+                    'galaxy_planet': []
                 }
             })
         SPACE_SIGN[player_id]['pos'] = galaxy_info['galaxy_name']
+        SPACE_SIGN[player_id]['state'] = "galaxy"
     else:
         galaxy_info = SPACE_GALAXY[player_pos]
+        SPACE_SIGN[player_id]['state'] = "galaxy"
         await into.send(f"冒险家 {player_name} ，所在星系 {player_pos}，所在宇宙位置 {galaxy_info['galaxy_pos']}")
