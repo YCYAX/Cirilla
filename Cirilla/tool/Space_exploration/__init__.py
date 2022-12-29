@@ -13,15 +13,17 @@ SPACE_SIGN结构
 SPACE_GALAXY结构
 {
     "星系名字": {
+        "galaxy_name": 星系名字,
         "galaxy_pos": [宇宙坐标],
         "galaxy_size": 星系内星球数量
-        'galaxy_state': 是否生成了星球,
-        'galaxy_planet': [星球名字]
+        "galaxy_state": 是否生成了星球,
+        "galaxy_planet": [星球名字]
     }
 }
 SPACE_PLANET结构
 {
     "星球名字": {
+        "planet_name": 星球名字,
         "planet_size": 星球尺寸大小,
         "planet_weather": "星球主属性",  # 金木水火土,
         "planet_state": 是否生成了地图,

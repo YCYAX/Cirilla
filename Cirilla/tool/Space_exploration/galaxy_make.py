@@ -29,4 +29,4 @@ class Galaxy:
         # 星系所含星球
         self.galaxy_planet = []
         # 星系状态
-        self.galaxy_state: False
+        self.galaxy_state = False
