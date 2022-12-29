@@ -26,3 +26,7 @@ class Galaxy:
         self.galaxy_size = random.randint(2, 10)
         # 星系在宇宙中的坐标
         self.galaxy_pos = (random.randint(0, 1000), random.randint(0, 1000))
+        # 星系所含星球
+        self.galaxy_planet = []
+        # 星系状态
+        self.galaxy_state: False
