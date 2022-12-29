@@ -42,6 +42,8 @@ async def show_galaxy(group_event: v11.GroupMessageEvent):
             galaxy_planet.append(planet_info["planet_name"])
         SPACE_GALAXY[player_pos]['galaxy_state'] = True
     txt = ""
+    index_number = 0
     for planet in galaxy_planet:
-        txt += planet+"\n"
+        index_number += 1
+        txt += str(index_number) + "." +planet+"\n"
     await show.send(f"玩家 {player_name},所在星系 {player_pos}\n星球有:\n{txt}")
