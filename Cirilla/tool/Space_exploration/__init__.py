@@ -2,6 +2,7 @@
 本模块负责处理玩家宇宙探索相关业务
 读取所有玩家注册信息: SPACE_SIGN
 读取所有星球信息: SPACE_PLANET
+读取所有星系信息: SPACE_GALAXY
 SPACE_SIGN结构
 {
     "id": {
