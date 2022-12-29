@@ -4,7 +4,7 @@ from nonebot.matcher import Matcher
 from Cirilla.tool.Space_exploration import *
 import nonebot.adapters.onebot.v11 as v11
 from Cirilla.tool.Space_exploration.planet_map_make import make_map
-import random, numpy, array
+import random, numpy
 
 into = on_command("进入星球", priority=1, block=True)
 
@@ -45,14 +45,14 @@ async def into_planet(group_event: v11.GroupMessageEvent, planet: str = ArgStr("
     player_name = SPACE_SIGN[player_id]['name']
     player_pos = SPACE_SIGN[player_id]['pos']
     # 判断是否为序列号
-    if planet.isalnum():
+    if planet.isnumeric():
         planet = SPACE_GALAXY[player_pos]["galaxy_planet"][int(planet) - 1]
     else:
         # 判断是否存在
-        if planet in SPACE_PLANET:
+        if planet in SPACE_GALAXY[player_pos]["galaxy_planet"]:
             pass
         else:
-            await into.finish("该星球不存在")
+            await into.finish("此星系不存在该星球")
     # 获取星球信息
     planet_size = SPACE_PLANET[planet]['planet_size']
     planet_weather = SPACE_PLANET[planet]['planet_weather']
