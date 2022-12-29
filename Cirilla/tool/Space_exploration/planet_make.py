@@ -76,8 +76,15 @@ class Planet:
                 pass
             else:
                 yes_or_no = False
+        # 星球名字
         self.planet_name = name + "星"
+        # 星球尺寸
         self.planet_size = random.randint(10, 32)
         weather = ["金", "木", "水", "火", "土"]
         index = random.randint(0, 4)
+        # 星球主属性
         self.planet_weather = weather[index]
+        # 星球状态
+        self.planet_state = False
+        # 星球地图
+        self.planet_map = []

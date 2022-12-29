@@ -37,12 +37,7 @@ async def show_galaxy(group_event: v11.GroupMessageEvent):
         for i in range(galaxy_size):
             planet_info = Planet().__dict__
             SPACE_PLANET.update({
-                planet_info["planet_name"]: {
-                    'planet_size': planet_info["planet_size"],
-                    'planet_weather': planet_info["planet_weather"],
-                    'planet_state': False,
-                    'planet_map': []
-                }
+                planet_info["planet_name"]: planet_info
             })
             galaxy_planet.append(planet_info["planet_name"])
         SPACE_GALAXY[player_pos]['galaxy_state'] = True
