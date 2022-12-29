@@ -46,7 +46,10 @@ async def into_planet(group_event: v11.GroupMessageEvent, planet: str = ArgStr("
     player_pos = SPACE_SIGN[player_id]['pos']
     # 判断是否为序列号
     if planet.isnumeric():
-        planet = SPACE_GALAXY[player_pos]["galaxy_planet"][int(planet) - 1]
+        try:
+            planet = SPACE_GALAXY[player_pos]["galaxy_planet"][int(planet) - 1]
+        except IndexError:
+            await into.finish("输入的序号大于此星系星球数量")
     else:
         # 判断是否存在
         if planet in SPACE_GALAXY[player_pos]["galaxy_planet"]:
@@ -89,6 +92,8 @@ async def into_planet(group_event: v11.GroupMessageEvent, planet: str = ArgStr("
     # 插入
     new_map = numpy.insert(new_map, 0, column_list, axis=1)  # 列
     new_map = numpy.insert(new_map, 0, row_list, axis=0)  # 行
+    # 修改位置
+    SPACE_SIGN[player_id]['pos'] = planet
     await into.finish(f"{planet}地图\n{new_map}")
 
 
