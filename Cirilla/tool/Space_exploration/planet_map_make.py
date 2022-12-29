@@ -1,8 +1,7 @@
 import numpy, random
-import array
 
 
-def make_map(size: int) -> array.array:
+def make_map(size: int):
     """
     生成地图
 
@@ -11,7 +10,7 @@ def make_map(size: int) -> array.array:
     :return: 地图数值
     """
     # 生成空数组
-    map = numpy.array([])
+    map = numpy.array([], dtype='object')
 
     def make_map_row(size: int) -> list:
         """
@@ -30,6 +29,7 @@ def make_map(size: int) -> array.array:
             index = random.randint(0, 4)
             map.append(txt[index])
         return map
+
     # 生成所有地图-列
     for i in range(size):
         map = numpy.append(map, [make_map_row(size)])
