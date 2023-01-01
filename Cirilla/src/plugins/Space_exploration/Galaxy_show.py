@@ -35,7 +35,7 @@ async def show_galaxy(group_event: v11.GroupMessageEvent):
     else:
         # 生成星球
         for i in range(galaxy_size):
-            planet_info = Planet().__dict__
+            planet_info = Planet(player_pos).__dict__
             SPACE_PLANET.update({
                 planet_info["planet_name"]: planet_info
             })

@@ -92,8 +92,9 @@ async def into_planet(group_event: v11.GroupMessageEvent, planet: str = ArgStr("
     # 插入
     new_map = numpy.insert(new_map, 0, column_list, axis=1)  # 列
     new_map = numpy.insert(new_map, 0, row_list, axis=0)  # 行
-    # 修改位置
+    # 修改位置并设置状态
     SPACE_SIGN[player_id]['pos'] = planet
+    SPACE_SIGN[player_id]['state'] = "planet"
     await into.finish(f"{planet}地图\n{new_map}")
 
 

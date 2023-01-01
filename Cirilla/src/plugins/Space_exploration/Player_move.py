@@ -22,10 +22,10 @@ async def check_player(matcher: Matcher, group_event: v11.GroupMessageEvent, arg
     player_id = str(group_event.user_id)
     # 获取玩家状态
     state = SPACE_SIGN[player_id]['state']
-    if state == 'galaxy':
+    if state == 'planet':
         pass
     else:
-        await move.finish("你不在星系中")
+        await move.finish("你不在星球中")
     plain_text = args.extract_plain_text()
     if plain_text:
         matcher.set_arg("move_pos", args)
