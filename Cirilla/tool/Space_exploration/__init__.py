@@ -100,3 +100,14 @@ for path in path_list:
             SPACE_PLANET = load_file(path)
         elif path == galaxy_path:
             SPACE_GALAXY = load_file(path)
+
+for planet in SPACE_PLANET.values():
+    name = planet['planet_name']
+    try:
+        galaxy_other = planet["planet_galaxy"]
+    except KeyError:
+        for galaxy in SPACE_GALAXY.values():
+            if name in galaxy["galaxy_planet"]:
+                SPACE_PLANET[name].update({
+                    "planet_galaxy" : galaxy['galaxy_name']
+                })
