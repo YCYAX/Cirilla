@@ -1,5 +1,4 @@
-from ..Space_exploration import *
-
+from Cirilla.tool.Space_exploration import SPACE_SIGN
 
 class Player:
     def __init__(self, name, id):
@@ -35,3 +34,4 @@ class Player:
         self.exp = 0
         # 玩家等级
         self.level = 0
+

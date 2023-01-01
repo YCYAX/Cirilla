@@ -9,6 +9,16 @@ SPACE_SIGN结构
         "name": "玩家昵称",
         "pos": "星系名字",
         "state": "玩家状态"
+        "health": 生命值,
+        "intelligence": 魔法值,
+        "strength": 气力值,
+        "oxygen": 氧气值,
+        "defense": 防御值,
+        "atk": 攻击值,
+        "speed": 速度值,
+        "watch": 洞察值,
+        "exp": 经验值,
+        "level": 等级值
     }
 }
 SPACE_GALAXY结构
@@ -37,6 +47,7 @@ save_file -> 保存内容至json
 模块：
 galaxy_make.py -> 生成星系
 planet_make.py -> 生成星球
+player_make.py -> 生成玩家信息
 planet_map_make.py -> 生成星球地图
 """
 import json, os
