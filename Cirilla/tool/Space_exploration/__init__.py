@@ -38,7 +38,9 @@ SPACE_PLANET结构
         "planet_size": 星球尺寸大小,
         "planet_weather": "星球主属性",  # 金木水火土,
         "planet_state": 是否生成了地图,
-        "planet_map": [地图]
+        "planet_map": [地图],
+        "planet_animals": 动物数量,
+        "planet_galaxy": 星球所在星系
     }
 }
 函数：
@@ -50,7 +52,7 @@ planet_make.py -> 生成星球
 player_make.py -> 生成玩家信息
 planet_map_make.py -> 生成星球地图
 """
-import json, os
+import json, os, random
 from Cirilla.tool.Log import control
 
 player_sign_path = "tool/Space_exploration/player_sign.json"
@@ -111,3 +113,12 @@ for planet in SPACE_PLANET.values():
                 SPACE_PLANET[name].update({
                     "planet_galaxy" : galaxy['galaxy_name']
                 })
+
+for planet in SPACE_PLANET.values():
+    name = planet['planet_name']
+    try:
+        galaxy_other = planet["planet_animals"]
+    except KeyError:
+        SPACE_PLANET[name].update({
+            "planet_animals" : random.randint(1,int(f"{SPACE_PLANET[name]['planet_size']/3:.0f}"))
+        })

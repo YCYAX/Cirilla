@@ -6,7 +6,11 @@ class Planet:
     """
     星球生成
     """
-    def __init__(self):
+    def __init__(self,galaxy):
+        """
+
+        :param galaxy: 星球所在星系
+        """
         range_number = random.randint(2, 8)
         yes_or_no = True
         while yes_or_no:
@@ -88,3 +92,7 @@ class Planet:
         self.planet_state = False
         # 星球地图
         self.planet_map = []
+        # 星球所在星系
+        self.planet_galaxy = galaxy
+        # 星球上动物数量
+        self.planet_animals = random.randint(1,int(f"{self.planet_size/3:.0f}"))
